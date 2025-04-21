@@ -31,7 +31,7 @@ const About = ({isdarkmode,setIsdarkmode}) => {
          transition={{ duration: 0.6 }}
         className="w-64 sm:w-80 rounded-3xl max-w-none">
           <Image
-            src={assets.tausifansar}
+            src={assets.mylaptop}
             alt=""
             className="w-full rounded-3xl"
           />

@@ -53,8 +53,7 @@ import texttoimage from './texttoimage.png'
 import tomato from './tomato.png'
 import weatherapp from './weather.png'
 import myportfolio from './myportfolio.png'
-
-
+import mylaptop from './mylaptop.jpg'
 
 
 export const assets = {
@@ -97,6 +96,7 @@ export const assets = {
     right_arrow_bold_dark,
     node,express,next,react,
     tausif,tausifansar,tausiflogo,tausiflogowhite
+    ,mylaptop
 };
 
 export const workData = [
@@ -136,7 +136,7 @@ export const serviceData = [
     { icon: assets.web_icon, title: 'Frontend Devlopment', description: 'I built the project using HTML, CSS, JavaScript, React.js, and Next.js, with styling powered by Bootstrap and Tailwind CSS.', link: '' },
     { icon: assets.mobile_icon, title: 'Backend devlopment', description: 'Backend development using Node.js, Express, and MongoDB involves building scalable and efficient RESTful APIs. ', link: '' },
     { icon: assets.ui_icon, title: 'Deployment', description: ' Deploying projects using platforms like Vercel and Render', link: '' },
-    { icon: assets.graphics_icon, title: 'UI/UX design', description: 'Creative design solutions to enhance visual communication...', link: '' },
+    { icon: assets.graphics_icon, title: 'Problem solving', description: 'I solved more than 350+ question on different coding plateform(leetcode ,GFG)', link: '' },
 ]
 
 export const infoList = [
