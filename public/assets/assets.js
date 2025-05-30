@@ -54,6 +54,7 @@ import tomato from './tomato.png'
 import weatherapp from './weather.png'
 import myportfolio from './myportfolio.png'
 import mylaptop from './mylaptop.jpg'
+import careercoach from "./careercoach.jpg"
 
 
 export const assets = {
@@ -109,6 +110,11 @@ export const workData = [
         title: 'Zomato clone',
         description: 'using mern',
         bgImage: tomato,
+    },
+    {
+        title: 'AI career Coach',
+        description: 'next.js, Gemini api',
+        bgImage: careercoach,
     },
     {
         title: 'Weather app',
