@@ -46,8 +46,7 @@ const About = ({isdarkmode,setIsdarkmode}) => {
             with experience in designing, developing, and maintaining scalable
             and dynamic web applications. I specialize in creating user-friendly
             front-end interfaces and robust back-end architectures using modern
-            technologies like [mention key tools/frameworks you use, e.g.,
-            React, Node.js, Django, etc.].
+            technologies html,css,javascript, react, next.js,node.js,express.js,mongoDB,postgreSQL.
           </p>
           <motion.ul 
              initial={{x:-200,opacity: 0 }}

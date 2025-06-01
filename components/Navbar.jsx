@@ -13,6 +13,7 @@ const Navbar = ({isdarkmode,setIsdarkmode}) => {
         sideMenuRef.current.style.transform='translateX(16rem)'
     }
     useEffect(()=>{
+        document.body.style.overflowX = 'hidden';
         window.addEventListener('scroll',()=>{
             if(scrollY>50){
                setIsscroll(true)
@@ -23,10 +24,10 @@ const Navbar = ({isdarkmode,setIsdarkmode}) => {
     },[])
   return (
     <div className={`${isdarkmode ?"dark:bg-darkTheme dark:text-white" : ""}`}>
-    <div className="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%] dark:hidden">
+    <div className="fixed top-0 right-0  -z-10 translate-y-[-80%] dark:hidden">
         <Image src={assets.header_bg_color} alt="" className="w-full"/>
     </div>
-      <nav className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 ${isscroll?'bg-white shadow-sm dark:bg-darkTheme dark:shadow-white/20':"" }`}>
+      <nav className={`w-full fixed px-10 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 ${isscroll?'bg-white shadow-sm dark:bg-darkTheme dark:shadow-white/20':"" }`}>
         <a href="">
             <Image src={isdarkmode?assets.tausiflogo:assets.tausiflogowhite} alt=""  className='w-28 cursor-pointer mr-14' />
         </a>

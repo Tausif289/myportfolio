@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 
 const Header = ({isdarkmode,setIsdarkmode}) => {
   return (
-    <div className={` w-full px-10 text-center mx-auto h-screen flex flex-col items-center justify-center gap-4 ${isdarkmode ? "dark:bg-darkTheme dark:text-white" : ""}`}>
+    <div className={` w-full px-10 text-center  h-screen mx-auto flex flex-col items-center justify-center gap-4 ${isdarkmode ? "dark:bg-darkTheme dark:text-white" : ""}`}>
       <motion.div
         initial={{ scale: 0 }}
         whileInView={{ scale: 1 }}

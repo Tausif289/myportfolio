@@ -9,7 +9,7 @@ const Work = ({isdarkmode,setIsdarkmode}) => {
     initial={{ opacity: 1 }}
     whileInView={{ opacity: 1 }}
     transition={{ duration: 0.7 }}
-    id="work" className={`w-full px-[12%] py-10 scroll-mt-20 ${isdarkmode ? "dark:bg-darkTheme dark:text-white" : ""}`}>
+    id="work" className={`w-full px-4 sm:px-8 md:px-16 lg:px-[15%] py-10 scroll-mt-20 ${isdarkmode ? "dark:bg-darkTheme dark:text-white" : ""}`}>
        <motion.h4 
         initial={{ y: -20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
@@ -31,7 +31,7 @@ const Work = ({isdarkmode,setIsdarkmode}) => {
        initial={{ opacity: 0 }}
        whileInView={{ opacity: 1 }}
        transition={{ duration: 0.7,delay:0.6 }}
-       className="grid grid-cols-auto my-10 gap-5">
+       className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 my-10 gap-5">
         {workData.map((project,index)=>(
             <motion.div
              initial={{ scale: 0 }}
