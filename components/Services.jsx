@@ -61,8 +61,6 @@ const Services = ({isdarkmode,setIsdarkmode}) => {
               {description}
             </p>
             <a className="flex items-center gap-2 text-sm " href={link}>
-              read more..
-              <Image src={assets.right_arrow} alt="" className="w-4" />
             </a>
           </motion.div>
         ))}
