@@ -3,101 +3,116 @@ import Image from "next/image";
 import { assets } from "@/public/assets/assets";
 import { motion } from "motion/react";
 
-const Contact = ({isdarkmode,setIsdarkmode}) => {
-    const [result, setResult] = useState("");
-    const onSubmit = async (event) => {
-        event.preventDefault();
-        setResult("Sending....");
-        const formData = new FormData(event.target);
-    
-        formData.append("access_key", "2aa3a44b-6054-4a04-a8f1-c2837d835314");
-    
-        const response = await fetch("https://api.web3forms.com/submit", {
-          method: "POST",
-          body: formData
-        });
-    
-        const data = await response.json();
-    
-        if (data.success) {
-          setResult("Form Submitted Successfully");
-          event.target.reset();
-        } else {
-          console.log("Error", data);
-          setResult(data.message);
-        }
-      };
-  return (
-    <motion.div 
-    initial={{ opacity: 1}}
-    whileInView={{ opacity: 1 }}
-    transition={{ duration: 0.7 }}
-    id="contact" className={`w-full px-[12%] py-10 scroll-mt-20 ${isdarkmode ? "dark:bg-darkTheme dark:text-white" : ""}`}>
-      <motion.h4 
-       initial={{ y: -20, opacity: 0 }}
-       whileInView={{ y: 0, opacity: 1 }}
-       transition={{ duration: 0.5, delay: 0.3 }}
-      className="text-center mb-2 text-lg font-Ovo">Contact with me</motion.h4>
-      <motion.h2
-       initial={{ y: -20, opacity: 0 }}
-       whileInView={{ y: 0, opacity: 1 }}
-       transition={{ duration: 0.5, delay: 0.3 }} 
-       className="text-center mb-2 text-5xl font-Ovo">Get in touch</motion.h2>
-      <motion.p 
-       initial={{ y: -20, opacity: 0 }}
-       whileInView={{ y: 0, opacity: 1 }}
-       transition={{ duration: 0.7, delay: 0.5 }}
-      className=" text-center max-w-2xl mx-auto font-Ovo">
-        I'd love to hear from you! If you have any quetions, comments, or
-        feedback, please use the form below.
-      </motion.p>
-      <motion.form
-       initial={{ opacity: 0 }}
-       whileInView={{ opacity: 1 }}
-       transition={{ duration: 1.0 }}
-       onSubmit={onSubmit} className="max-w-2xl mx-auto">
-        <div className="grid grid-cols-auto gap-6 mt-10 mb-8">
-          <motion.input
-             initial={{ x: -100, opacity: 0 }}
-             whileInView={{ x: 0, opacity: 1 }}
-             transition={{ duration: 0.7}}
-            className="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHower/30"
-            type="text"
-            placeholder="Enter your name"
-            required
-            name="name"
+const Contact = ({ isdarkmode, setIsdarkmode }) => {
+  const [result, setResult] = useState("");
 
-          />
-          <motion.input
-           initial={{ x: 100, opacity: 0 }}
-           whileInView={{ x: 0, opacity: 1 }}
-           transition={{ duration: 0.7, delay: 0.5 }}
-            className="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white  dark:bg-darkHower/30"
-            type="email"
-            placeholder="Enter your email"
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "2aa3a44b-6054-4a04-a8f1-c2837d835314");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setResult("Form Submitted Successfully");
+      event.target.reset();
+    } else {
+      console.log("Error", data);
+      setResult(data.message);
+    }
+  };
+
+  return (
+    <section
+      id="contact"
+      className={`relative w-full py-20 px-[10%] transition-all duration-500 ${
+        isdarkmode
+          ? "bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white"
+          : "bg-gradient-to-br from-white via-blue-50 to-blue-100 text-gray-800"
+      }`}
+    >
+      {/* 🔹 Background Decorative Blurs */}
+      <div className="absolute top-10 left-10 w-72 h-72 bg-blue-400/20 blur-3xl rounded-full -z-10" />
+      <div className="absolute bottom-10 right-10 w-80 h-80 bg-purple-400/25 blur-3xl rounded-full -z-10" />
+
+      {/* 🔹 Section Header */}
+      <motion.div
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+        className="text-center mb-14 max-w-2xl mx-auto"
+      >
+        <h4 className="text-lg font-Ovo opacity-80">Get in Touch</h4>
+        <h2 className="text-5xl font-bold font-Ovo mt-2 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 drop-shadow-lg">
+          Contact Me
+        </h2>
+        <p className="mt-5 text-lg leading-relaxed text-gray-700 dark:text-gray-300 font-Ovo">
+          I'd love to hear from you! Fill out the form below with any questions, comments, or feedback.
+        </p>
+      </motion.div>
+
+      {/* 🔹 Form Card */}
+      <motion.form
+        onSubmit={onSubmit}
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.9 }}
+        className={`max-w-3xl mx-auto p-10 rounded-2xl backdrop-blur-md border transition-all duration-500
+          ${isdarkmode
+            ? "bg-gray-800/50 border-gray-700 hover:bg-gray-700/70 hover:shadow-lg hover:shadow-purple-500/30"
+            : "bg-white/60 border-gray-200 hover:bg-white/80 hover:shadow-lg hover:shadow-blue-400/30"
+          }`}
+      >
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
             required
+            className="w-full p-4 rounded-lg border border-gray-300 dark:border-gray-600 bg-transparent focus:ring-2 focus:ring-blue-400 dark:focus:ring-blue-500 outline-none transition"
+          />
+          <input
+            type="email"
             name="email"
+            placeholder="Your Email"
+            required
+            className="w-full p-4 rounded-lg border border-gray-300 dark:border-gray-600 bg-transparent focus:ring-2 focus:ring-blue-400 dark:focus:ring-blue-500 outline-none transition"
           />
         </div>
-        <motion.textarea
-         initial={{ x: -100, opacity: 0 }}
-         whileInView={{ x: 0, opacity: 1 }}
-         transition={{ duration: 0.7, delay: 0.5 }}
-          className="w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white mb-6  dark:bg-darkHower/30 "
-          rows="6"
-          placeholder="enter your message"
+
+        <textarea
           name="message"
-        ></motion.textarea>
-        <motion.button
-          whileHover={{ scale: 1.1 }}
-          className="py-3 px-8 w-max flex items-center justify-between gap-2 bg-black/80 text-white rounded-full mx-auto hover:bg-black duration-500 dark:bg-transparent dark:border-[0.5px] dark:hover:bg-darkHower"
+          placeholder="Your Message"
+          rows="6"
+          required
+          className="w-full p-4 rounded-lg border border-gray-300 dark:border-gray-600 bg-transparent focus:ring-2 focus:ring-blue-400 dark:focus:ring-blue-500 outline-none transition mb-6"
+        ></textarea>
+
+        <button
           type="submit"
+          className="flex items-center gap-2 px-8 py-3 rounded-full font-medium bg-black text-white hover:bg-gray-800 transition-all dark:bg-transparent dark:border dark:border-white/50 dark:hover:bg-darkHower mx-auto"
         >
-          Submit now <Image src={assets.right_arrow_white} alt="" className="w-4" />
-        </motion.button>
-        <p>{result}</p>
+          Submit Now
+          <Image src={assets.right_arrow_white} alt="" className="w-4" />
+        </button>
+
+        {result && (
+          <p className="mt-4 text-center text-sm text-gray-600 dark:text-gray-300 font-Ovo">
+            {result}
+          </p>
+        )}
       </motion.form>
-    </motion.div>
+
+      {/* 🔹 Bottom Glow */}
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[80%] h-32 bg-gradient-to-t from-blue-500/10 to-transparent blur-2xl rounded-full -z-10" />
+    </section>
   );
 };
 

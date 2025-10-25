@@ -55,6 +55,8 @@ import weatherapp from './weather.png'
 import myportfolio from './myportfolio.png'
 import mylaptop from './mylaptop.jpg'
 import careercoach from "./careercoach.jpg"
+import farmarcropadvisory from "./farmercrop.png"
+import healthtracker from "./healthtracker.png"
 
 
 export const assets = {
@@ -96,19 +98,30 @@ export const assets = {
     right_arrow_bold,
     right_arrow_bold_dark,
     node,express,next,react,
-    tausif,tausifansar,tausiflogo,tausiflogowhite
+    tausif,
+    tausifansar,tausiflogo,tausiflogowhite
     ,mylaptop
 };
 
 export const workData = [
     {
+        title: 'Farmer crop advisory',
+        description: 'mangoDb,expressJs,react,nodeJs',
+        bgImage: farmarcropadvisory,
+    },
+    {
+        title: 'Deit tracker',
+        description: 'mangoDb,expressJs,Angular,nodeJs',
+        bgImage: healthtracker,
+    },
+       {
         title: 'Text to image',
-        description: 'using mern',
+        description: 'mangoDb,expressJs,react,nodeJs',
         bgImage: texttoimage,
     },
     {
         title: 'Zomato clone',
-        description: 'using mern',
+        description: 'mangoDb,expressJs,react,nodeJs',
         bgImage: tomato,
     },
     {
@@ -120,11 +133,6 @@ export const workData = [
         title: 'Weather app',
         description: 'using react',
         bgImage: weatherapp,
-    },
-    {
-        title: 'My portfolio',
-        description: 'using next,tailwind,web3',
-        bgImage: myportfolio,
     },
     {
         title: 'Tic-toc-toe game',
@@ -139,7 +147,7 @@ export const workData = [
 ]
 
 export const serviceData = [
-    { icon: assets.web_icon, title: 'Frontend Devlopment', description: 'I built the project using HTML, CSS, JavaScript, React.js, and Next.js, with styling powered by Bootstrap and Tailwind CSS.', link: '' },
+    { icon: assets.web_icon, title: 'Frontend Devlopment', description: 'I built the project using HTML, CSS, JavaScript,Typescript, React.js,Angular and Next.js, with styling powered by Bootstrap and Tailwind CSS.', link: '' },
     { icon: assets.mobile_icon, title: 'Backend devlopment', description: 'Backend development using Node.js, Express, and MongoDB involves building scalable and efficient RESTful APIs. ', link: '' },
     { icon: assets.ui_icon, title: 'Deployment', description: ' Deploying projects using platforms like Vercel and Render', link: '' },
     { icon: assets.graphics_icon, title: 'Problem solving', description: 'I solved more than 350+ question on different coding plateform(leetcode ,GFG)', link: '' },
@@ -147,8 +155,8 @@ export const serviceData = [
 
 export const infoList = [
     { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages', description: 'HTML, CSS, JavaScript, java ,python,TypeScript' },
-    { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Technologies', description: 'TailwindCss, Bootstrap,ReactJs ,NextJs,nodejs, express,MongoDb' },
-    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', description: 'Zomato clone, Text to image generator, apna collage clone, weatherApp ,Tic-toc-toe game' }
+    { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Technologies', description: 'TailwindCss, Bootstrap,ReactJs ,NextJs,Angular,nodejs, express,MongoDb,postgreSql' },
+    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', description: 'Farmer crop advisory, Deit tracker,Zomato clone, Text to image generator, apna collage clone, weatherApp ,Tic-toc-toe game' }
 ];
 
 export const toolsData = [
