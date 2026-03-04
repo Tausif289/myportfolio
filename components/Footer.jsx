@@ -6,13 +6,13 @@ import { motion } from "motion/react";
 const Footer = ({ isdarkmode, setIsdarkmode }) => {
   return (
     <section
-      id="footer"
-      className={`relative w-full py-16 px-[10%] transition-all duration-500 ${
-        isdarkmode
-          ? "bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white"
-          : "bg-gradient-to-br from-white via-blue-50 to-blue-100 text-gray-800"
-      }`}
-    >
+  id="footer"
+  className={`relative w-full py-16 px-[10%] mb-0 transition-all duration-500 ${
+    isdarkmode
+      ? "bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white"
+      : "bg-gradient-to-br from-white via-blue-50 to-blue-100 text-gray-800"
+  }`}
+>
       {/* 🔹 Background Decorative Blurs */}
       <div className="absolute top-10 left-10 w-72 h-72 bg-blue-400/20 blur-3xl rounded-full -z-10" />
       <div className="absolute bottom-10 right-10 w-80 h-80 bg-purple-400/25 blur-3xl rounded-full -z-10" />
@@ -71,10 +71,7 @@ const Footer = ({ isdarkmode, setIsdarkmode }) => {
             </a>
           </li>
         </ul>
-      </div>
-
-      {/* 🔹 Bottom Glow */}
-      
+      </div> 
     </section>
   );
 };

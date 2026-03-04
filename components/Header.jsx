@@ -58,7 +58,7 @@ const Header = ({ isdarkmode }) => {
 
           <motion.a
             whileHover={{ scale: 1.05 }}
-            href="/Tausif__resume_.pdf"
+            href="/Tausif_res.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="px-8 py-3 rounded-full text-lg font-medium border border-gray-400/50 backdrop-blur-sm
@@ -91,7 +91,7 @@ const Header = ({ isdarkmode }) => {
           className="relative z-10"
         >
           <Image
-            src={assets.tausif}
+            src={assets.tausifpic}
             alt="Tausif Ansar"
             className="w-52 sm:w-64 lg:w-80 rounded-full border-4 border-white/20 shadow-xl"
             priority

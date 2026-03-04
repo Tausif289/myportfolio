@@ -57,6 +57,8 @@ import mylaptop from './mylaptop.jpg'
 import careercoach from "./careercoach.jpg"
 import farmarcropadvisory from "./farmercrop.png"
 import healthtracker from "./healthtracker.png"
+import careerai from  "./careerai.png"
+import tausifpic from  "./tausifpic.jpeg"
 
 
 export const assets = {
@@ -100,49 +102,58 @@ export const assets = {
     node,express,next,react,
     tausif,
     tausifansar,tausiflogo,tausiflogowhite
-    ,mylaptop
+    ,mylaptop,
+    tausifpic
 };
 
 export const workData = [
     {
         title: 'Farmer crop advisory',
-        description: 'mangoDb,expressJs,react,nodeJs',
+        description: 'MongoDB, ExpressJs, React, NodeJs',
         bgImage: farmarcropadvisory,
+        link: 'https://farmer-bl1m.onrender.com/',
+    },
+    {
+        title: 'CareerPilot AI',
+        description: 'Next.js, Gemini API',
+        bgImage: careerai,
+        link: 'https://careerpilotai-iota.vercel.app/',
     },
     {
         title: 'Deit tracker',
-        description: 'mangoDb,expressJs,Angular,nodeJs',
+        description: 'MongoDB, ExpressJs, Angular, NodeJs',
         bgImage: healthtracker,
+        link: 'https://deittracker.vercel.app/dashboard',   // add deployment link here if available
     },
-       {
+    {
         title: 'Text to image',
-        description: 'mangoDb,expressJs,react,nodeJs',
+        description: 'MongoDB, ExpressJs, React, NodeJs',
         bgImage: texttoimage,
+        link: 'https://imagify-ftx0.onrender.com/',
     },
     {
         title: 'Zomato clone',
-        description: 'mangoDb,expressJs,react,nodeJs',
+        description: 'MongoDB, ExpressJs, React, NodeJs',
         bgImage: tomato,
-    },
-    {
-        title: 'AI career Coach',
-        description: 'next.js, Gemini api',
-        bgImage: careercoach,
+        link: '',   // add deployment link here if available
     },
     {
         title: 'Weather app',
-        description: 'using react',
+        description: 'Using React',
         bgImage: weatherapp,
+        link: '',   // add link if deployed
     },
     {
         title: 'Tic-toc-toe game',
-        description: 'using html,css,js',
+        description: 'Using HTML, CSS, JS',
         bgImage: tic,
+        link: '',   // add link if deployed
     },
     {
         title: 'Apana collage clone',
-        description: 'using mern',
+        description: 'Using MERN',
         bgImage: apanacollage,
+        link: '',   // add link if deployed
     },
 ]
 
@@ -150,7 +161,7 @@ export const serviceData = [
     { icon: assets.web_icon, title: 'Frontend Devlopment', description: 'I built the project using HTML, CSS, JavaScript,Typescript, React.js,Angular and Next.js, with styling powered by Bootstrap and Tailwind CSS.', link: '' },
     { icon: assets.mobile_icon, title: 'Backend devlopment', description: 'Backend development using Node.js, Express, and MongoDB involves building scalable and efficient RESTful APIs. ', link: '' },
     { icon: assets.ui_icon, title: 'Deployment', description: ' Deploying projects using platforms like Vercel and Render', link: '' },
-    { icon: assets.graphics_icon, title: 'Problem solving', description: 'I solved more than 350+ question on different coding plateform(leetcode ,GFG)', link: '' },
+    { icon: assets.graphics_icon, title: 'Problem solving', description: 'I solved more than 750+ question on different coding plateform(leetcode ,GFG,codeChef)', link: '' },
 ]
 
 export const infoList = [
